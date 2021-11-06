@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>My name is Hugo (Xiaohu) Wang!</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="resume.html">About</a>
+</li>
+<li>
+  <a href="mailto:&lt;hugowang.xiaohu@gmail.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/&lt;hugiiio&gt;/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/hugo-wang-xiaohu/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">My name is Hugo (Xiaohu) Wang!</h1>
+
+</div>
+
+
+<div id="education" class="section level2">
+<h2>Education</h2>
+<p><strong>Columbia University, Mailman School of Public Health</strong></p>
+<p>New York, NY</p>
+<p>MPH, Health Policy &amp; Management, Applied Biostatistics | GPA: 4.0</p>
+<p>9/2020-5/2022</p>
+<p><strong>New York University, College of Art and Science</strong></p>
+<p>New York, NY</p>
+<p>BS, Biology, Minor in Studio Art | GPA: 3.5 | GRE: 331</p>
+<p>9/2016-5/2020</p>
+</div>
+<div id="professional-experiences" class="section level2">
+<h2>Professional Experiences</h2>
+<div id="somos-community-care" class="section level3">
+<h3>SOMOS Community Care</h3>
+<p>New York, NY</p>
+<p>Summer Strategy Analyst</p>
+<p>5/2021-Present</p>
+<ul>
+<li><p>Planned and implemented Social Determinants of Health intervention program, funded by the State Medicaid Redesign Team, to support SOMOS’ value-based payment level 3 contract (only one in NYS).</p></li>
+<li><p>Collaborated with:</p>
+<pre><code>   -  3 community-based organizations to roll out the program. Composed program manual for CBO partners.
+
+   -  Clinical Data team to build a centralized system for patient data tracking &amp; reporting. Administered data collection and entering.
+
+   -  Care Management team to formulate patient engagement strategies and organize performance management meetings to assess and evaluate the program. </code></pre></li>
+<li><p>Analyzed patient data to develop reports of the project plan and progress to Managed Care Organization partners and NYSDOH.</p></li>
+</ul>
+</div>
+<div id="international-healthcare-leadershipjunipermd" class="section level3">
+<h3>International Healthcare Leadership/JuniperMD</h3>
+<p>New York, NY</p>
+<p>Fellowship</p>
+<p>9/2020-5/2021</p>
+<ul>
+<li><p>Prepared pitch deck for C-Suites to present JuniperMD’s enterprise wellness offering to investors: Synthesized data of business portfolio, service provisions, enterprise wellness market size and growth drivers, competitive landscape, and the implementation of enterprise onsite clinics in the US and China markets.</p></li>
+<li><p>Kicked off a new business project for a probiotics product to enter China market: - Collaborated with a team of 6 including US-based investors and China-based clients</p>
+<pre><code> -    Led the market research on manufacturers info (Merck, Roche, etc.), market entry regulations, target customers (demographics, preferences, unmet needs), and developed a marketing proposal </code></pre></li>
+<li><p>Managed JuniperMD’s LinkedIn page including content development, outreach, page maintenance and postings. Boosted followers by 60% and post impressions by 700%.</p></li>
+</ul>
+</div>
+<div id="asia-societyyoung-green-tech-ygt" class="section level3">
+<h3>ASIA SOCIETY/YOUNG GREEN TECH (YGT)</h3>
+<p>New York, NY</p>
+<p>Project Leader</p>
+<p>1/2020-9/2020</p>
+<ul>
+<li><p>Recruited 200+ event participants from new energy &amp; tech start-ups within 1 month. Processed participants data in Excel (pivot tables, charts) and weekly presented recruiting status in 10 local countries.</p></li>
+<li><p>Spearheaded YGT Alumni Project and improved communication of YGT alumni by creating and maintaining group chats across platforms (WeChat, WhatsApp, &amp; Facebook).</p></li>
+</ul>
+</div>
+<div id="northbound.is" class="section level3">
+<h3>NORTHBOUND.IS</h3>
+<p>Reykjavik, Iceland</p>
+<p>Marketing Consultant</p>
+<p>1/2019-5/2020</p>
+<ul>
+<li><p>Served as a consultant and translator for the CEO on Search Engine Optimization and content strategy.</p></li>
+<li><p>Expanded customer base in the East Asian market by 60% within a year for the company.</p></li>
+</ul>
+</div>
+<div id="international-center-for-aids-prevention" class="section level3">
+<h3>International Center for AIDS Prevention</h3>
+<p>New York, NY</p>
+<p>Graduate Research Fellowship</p>
+<p>9/2021-Present</p>
+<ul>
+<li><p>Supported research publications based on survey data obtained from alumni.</p></li>
+<li><p>Reviewed and analyzed alumni survey results to develop ongoing engagement strategies for targeted alumni segments.</p></li>
+</ul>
+</div>
+</div>
+<div id="leadership" class="section level2">
+<h2>Leadership</h2>
+<div id="columbia-mailman-consulting-club" class="section level3">
+<h3>Columbia Mailman Consulting Club</h3>
+<p>New York, NY</p>
+<p>President of External Affair</p>
+<p>10/2020-Present</p>
+</div>
+<div id="a-little-bit-human-subsidiary-of-new-saga-media" class="section level3">
+<h3>A Little Bit Human (Subsidiary of New Saga Media)</h3>
+<p>New York, NY</p>
+<p>Co-founder, Healthcare Content Manager, Initiative Director</p>
+<p>11/2020-Present</p>
+<ul>
+<li>Establish collaboration with charity groups to raise awareness and social issues and funds for activism.</li>
+</ul>
+</div>
+</div>
+<div id="courses-skills" class="section level2">
+<h2>Courses &amp; Skills</h2>
+<ul>
+<li><p><strong>Courses</strong>: Molecular Biology, Organic Chemistry, Microbiology, Healthcare Accounting &amp; Budgeting, Biostatistics, Epidemiology, Health Policy &amp; Political Analysis, Regression, Data Science, etc.</p></li>
+<li><p><strong>Skills</strong>: Microsoft Word, Excel, PowerPoint, R, STATA, SAS, Adobe Photoshop, Adobe Illustrator, Graphic Design</p></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

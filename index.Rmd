@@ -1,0 +1,14 @@
+---
+title: "Introduction"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+ Hi! Welcome to my landing page!
+ 
+![](images/giphy.gif)
+
+
+ 
+ 
