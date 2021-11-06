@@ -9,6 +9,6 @@ output:
  
 ![](images/giphy.gif)
 
-
+[Flex Dashboard](flex_dashboard.html)
  
  
